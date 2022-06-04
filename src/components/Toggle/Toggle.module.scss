@@ -1,0 +1,27 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid var(--primary);
+    border-radius: 100rem;
+    position: relative;
+    padding: 2px;
+    cursor: pointer;
+    gap: 2px;
+
+    & > * {
+        color: var(--primary);
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+.button {
+    border-radius: 100%;
+    background: var(--primary);
+    position: absolute;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}

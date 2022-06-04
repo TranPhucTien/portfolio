@@ -1,0 +1,227 @@
+@import 'normalize.css';
+
+:root {
+    --primary: rgb(254, 44, 85);
+    --black: #000;
+    --white: #fff;
+    --text-color: rgb(22 24 35);
+
+    --box-shadow: 0px 20px 24px 3px rgba(255, 75, 43, 0.2);
+    --filter-shadow: drop-shadow(2px 20px 21px rgba(255, 75, 43, 0.6));
+    --filter-shadow-large: drop-shadow(2px 20px 21px rgba(255, 75, 43, 0.8));
+
+    --background: rgba(254, 44, 85, 0.05);
+
+    --font-family: 'ProximaNova', sans-serif;
+
+    --header-height: 64px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+}
+
+// Scrollbar css
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+// Fonts emmbeded
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/Proxima-Nova-Regular.woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/ProximaNova-Semibold.woff2');
+    font-weight: 600;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/fonts/Proxima-Nova-Bold.woff');
+    font-weight: 700;
+}
+@font-face {
+    font-family: SofiaPro;
+    src: url('/assets/fonts/sofiapro-bold.woff');
+    font-weight: 700;
+}
+@font-face {
+    font-family: Gumela;
+    src: url('/assets/fonts/Gumela-Regular.otf');
+    font-weight: normal;
+}
+
+button,
+input,
+[tabindex] {
+    border: none;
+    outline: none;
+    font-family: var(--primary);
+}
+
+.button {
+    cursor: pointer;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1170px;
+    padding: 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    color: white;
+    padding: 9px 18px;
+    border: 1px solid transparent;
+    transition: all 0.25s linear;
+
+    &-primary {
+        background: linear-gradient(180deg, var(--primary) 26.71%, #ff4b2b 99.36%);
+        color: white;
+        transition: all 0.25s linear;
+        // font-weight: 400;
+        font-size: 1.8rem;
+    }
+
+    &-border {
+        border-radius: 100rem;
+    }
+
+    &-shadow {
+        box-shadow: var(--box-shadow);
+    }
+
+    &-secondary {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 8px 14px;
+        color: white;
+        border-radius: 13px;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+
+        background-color: #b9bbbe;
+        background-image: radial-gradient(circle at center, #caccce 50%, transparent 50%);
+        background-repeat: no-repeat;
+        transition: background-size 300ms;
+        background-size: 0 0;
+        background-position: 50% 50%;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    &-primary:hover,
+    &:hover {
+        background: white;
+        cursor: pointer;
+        border: 1px solid var(--primary);
+        color: var(--primary);
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+// Slick
+.slick-slide {
+    transform: scale(0.8);
+    opacity: 0.7;
+    filter: grayscale(0.5);
+    transition: all 0.25s linear;
+    cursor: pointer;
+
+    & > *button {
+        pointer-events: none;
+    }
+}
+.slick-center {
+    transform: scale(1) !important;
+    opacity: 1 !important;
+    filter: grayscale(0) !important;
+    transition: all 0.25s linear;
+    cursor: default;
+
+    & > *button {
+        pointer-events: all;
+    }
+}
+
+.slick-center .slick-slide {
+    cursor: default;
+}
+
+.slick-slide {
+    height: auto;
+}
+
+.slick-list {
+    max-height: 125vh;
+}
+
+// để khi scroll into view không che mất navigation
+.slick-initialized .slick-slide {
+    padding-bottom: 120px;
+}
+
+// Ipad
+@media only screen and (max-width: 1024px) {
+    .slick-list {
+        max-height: 80vh;
+    }
+}
+
+// Mobile
+@media only screen and (max-width: 769px) {
+    // disabled button
+    .slick-list {
+        max-height: 130vh;
+    }
+}

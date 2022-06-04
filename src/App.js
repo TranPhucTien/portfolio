@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from 'react';
+import Intro from './components/Intro';
+import Navbar from './components/Navbar';
+import Portfolio from './components/Portfolio';
+import { ThemeContext } from './ThemeContext';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    const themeContext = useContext(ThemeContext);
+    const darkMode = themeContext.darkMode;
+
+    if (darkMode) {
+        document.body.style=`background-color: var(--black)`
+    }
+    else {
+        document.body.style=`background-color: var(--white)`
+    }
+
+    return (
+        <div
+            className={'wrapper'}
+            style={{
+                background: darkMode ? 'var(--black)' : '',
+                color: darkMode ? 'var(--white)' : '',
+            }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+            <Navbar />
+            <Intro />
+            <Portfolio />
+        </div>
+    );
 }
 
 export default App;
