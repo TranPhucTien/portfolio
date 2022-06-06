@@ -18,7 +18,7 @@ export const itemsAPI = [
         desc: 'A collection and description of all 898 Pokémon',
     },
     {
-        image: '	https://david-hckh.com/images/projects/portfolio.jpg',
+        image: 'https://david-hckh.com/images/projects/portfolio.jpg',
         title: 'Portfolio 2022',
         tags: ['JavaScript', 'WebGL', 'HTML', 'CSS'],
         desc: 'A case study for this project is currently being written. Follow me on Twitter to stay up to date.',
@@ -30,5 +30,3 @@ export const itemsAPI = [
         desc: 'A case study for this project is currently being written. Follow me on Twitter to stay up to date.',
     },
 ];
-
-export default function a() {}

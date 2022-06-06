@@ -1,7 +1,9 @@
 import { useContext } from 'react';
+import Info from './components/Info';
 import Intro from './components/Intro';
 import Navbar from './components/Navbar';
 import Portfolio from './components/Portfolio';
+import Slick from './components/Slick';
 import { ThemeContext } from './ThemeContext';
 
 function App() {
@@ -25,7 +27,9 @@ function App() {
         >
             <Navbar />
             <Intro />
+            {/* <Info /> */}
             <Portfolio />
+            {/* <Slick /> */}
         </div>
     );
 }

@@ -10,7 +10,10 @@
     --filter-shadow: drop-shadow(2px 20px 21px rgba(255, 75, 43, 0.6));
     --filter-shadow-large: drop-shadow(2px 20px 21px rgba(255, 75, 43, 0.8));
 
+    --background-lighter: rgba(254, 44, 85, 0.02);
     --background: rgba(254, 44, 85, 0.05);
+    --background-darker: rgba(254, 44, 85, 0.1);
+    --background-dark: rgba(254, 44, 85, 0.3);
 
     --font-family: 'ProximaNova', sans-serif;
 
@@ -32,6 +35,7 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
+    overflow-x: hidden;
 }
 
 // Scrollbar css
@@ -85,6 +89,15 @@ html *::-webkit-scrollbar-track {
     font-family: Gumela;
     src: url('/assets/fonts/Gumela-Regular.otf');
     font-weight: normal;
+}
+
+img {
+    object-fit: cover;
+    object-position: center;
+}
+
+button {
+    user-select: none;
 }
 
 button,
@@ -198,30 +211,29 @@ input,
     cursor: default;
 }
 
-.slick-slide {
-    height: auto;
-}
+// .slick-slide {
+//     height: auto;
+// }
 
-.slick-list {
-    max-height: 125vh;
-}
+// .slick-list {
+//     max-height: 125vh;
+// }
 
 // để khi scroll into view không che mất navigation
 .slick-initialized .slick-slide {
     padding-bottom: 120px;
 }
 
+// Swiper
+.swiper-slide {
+    width: 100%;
+}
+
 // Ipad
 @media only screen and (max-width: 1024px) {
-    .slick-list {
-        max-height: 80vh;
-    }
 }
 
 // Mobile
 @media only screen and (max-width: 769px) {
     // disabled button
-    .slick-list {
-        max-height: 130vh;
-    }
 }

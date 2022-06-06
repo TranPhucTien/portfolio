@@ -4,7 +4,7 @@
     height: calc(100vh - var(--header-height));
 }
 
-.intro {
+.content {
     flex: 1;
     &-title {
         display: flex;
@@ -23,11 +23,8 @@
     }
 }
 
-.iframe {
-    align-items: center;
+.image {
     flex: 1;
-    border: none;
-    outline: none;
 }
 
 .icons {

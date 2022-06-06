@@ -6,7 +6,7 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+// import 'slick-carousel/slick/slick-theme.css';
 
 import { itemsAPI } from './ItemAPI';
 import styles from './Portfolio.module.scss';
@@ -22,14 +22,14 @@ function Portfolio() {
         centerMode: true,
         focusOnSelect: true,
         infinite: true,
-        slidesToShow: 3.5,
+        slidesToShow: 3,
         initialSlide: 2,
         slidesToScroll: 1,
         speed: 500,
         variableWidth: true,
         cssEase: 'linear',
         touchMove: true,
-        arrows: true,
+        arrows: false,
         ref: slideRef,
         draggable: false,
         responsive: [

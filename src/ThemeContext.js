@@ -1,18 +1,26 @@
-const { createContext, useState } = require('react');
+const { createContext, useState, useEffect } = require('react');
 
 const ThemeContext = createContext();
 
 function ThemeProvider({ children }) {
-    const [darkMode, setDarkMode] = useState(false);
+    const getTheme = () => {
+        return JSON.parse(localStorage.getItem('darkMode')) || false;
+    };
 
+    const [darkMode, setDarkMode] = useState(getTheme());
+    
     const toggleTheme = () => {
         setDarkMode(darkMode ? false : true);
     };
+    
+    useEffect(() => {
+        localStorage.setItem('darkMode', JSON.stringify(darkMode))
+    }, [darkMode]);
 
     const value = {
         darkMode,
-        toggleTheme
-    }
+        toggleTheme,
+    };
 
     return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 }
