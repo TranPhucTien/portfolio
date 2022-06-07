@@ -1,5 +1,4 @@
 .wrapper {
-    background: var(--background);
     padding: 4rem 0 0 0;
     overflow: auto;
     overflow: -moz-scrollbars-none;
@@ -13,6 +12,13 @@
         width: 0 !important;
         display: none;
     }
+}
+
+.container > hr {
+    width: 40px;
+    background-color: #FF923E;
+    margin: 0;
+    margin-right: 20px;
 }
 
 .navigation {

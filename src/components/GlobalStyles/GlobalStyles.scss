@@ -3,6 +3,7 @@
 :root {
     --primary: rgb(254, 44, 85);
     --black: #000;
+    --night: #0d1117;
     --white: #fff;
     --text-color: rgb(22 24 35);
 
@@ -13,7 +14,7 @@
     --background-lighter: rgba(254, 44, 85, 0.02);
     --background: rgba(254, 44, 85, 0.05);
     --background-darker: rgba(254, 44, 85, 0.1);
-    --background-dark: rgba(254, 44, 85, 0.3);
+    --background-dark: rgba(254, 44, 85, 0.6);
 
     --font-family: 'ProximaNova', sans-serif;
 
@@ -90,10 +91,22 @@ html *::-webkit-scrollbar-track {
     src: url('/assets/fonts/Gumela-Regular.otf');
     font-weight: normal;
 }
+@font-face {
+    font-family: Poppin;
+    src: url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+}
 
 img {
     object-fit: cover;
     object-position: center;
+}
+
+hr {
+    height: 2px;
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    margin: 25px 0;
+    border: none;
 }
 
 button {
@@ -183,6 +196,33 @@ input,
     cursor: pointer;
 }
 
+.sub-header {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: Gumela;
+
+    &-container {
+        display: flex;
+        align-items: center;
+        color: var(--primary);
+        padding-bottom: 1rem;
+
+        & > hr {
+            width: 40px;
+            background-color: var(--primary);
+            margin: 0 20px 0 0;
+            align-items: center;
+        }
+    }
+}
+
+.title-header {
+    font-size: 5rem;
+    font-weight: 700;
+    font-family: SofiaPro;
+    line-height: 1.2;
+}
+
 // Slick
 .slick-slide {
     transform: scale(0.8);
@@ -210,14 +250,6 @@ input,
 .slick-center .slick-slide {
     cursor: default;
 }
-
-// .slick-slide {
-//     height: auto;
-// }
-
-// .slick-list {
-//     max-height: 125vh;
-// }
 
 // để khi scroll into view không che mất navigation
 .slick-initialized .slick-slide {

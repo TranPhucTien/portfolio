@@ -1,17 +1,18 @@
 .wrapper {
     display: flex;
     align-items: stretch;
-    height: calc(100vh - var(--header-height));
 }
 
 .content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     &-title {
         display: flex;
         flex-direction: column;
         font-size: 6rem;
         font-weight: 700;
-        padding-top: 15%;
         line-height: 7.2rem;
     }
     &-name {
@@ -42,6 +43,10 @@
     }
 }
 
+.button {
+    max-width: 200px;
+}
+
 .fill-shadow {
     filter: var(--filter-shadow);
 }
@@ -51,9 +56,8 @@
 }
 
 @media only screen and (max-width: 1024px) {
-    .wrapper {
-        height: 110vh;
-    }
+    // .wrapper {
+    // }
     .intro {
         &-name,
         &-hello {

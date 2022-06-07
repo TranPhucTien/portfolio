@@ -3,7 +3,6 @@ import Info from './components/Info';
 import Intro from './components/Intro';
 import Navbar from './components/Navbar';
 import Portfolio from './components/Portfolio';
-import Slick from './components/Slick';
 import { ThemeContext } from './ThemeContext';
 
 function App() {
@@ -21,15 +20,14 @@ function App() {
         <div
             className={'wrapper'}
             style={{
-                background: darkMode ? 'var(--black)' : '',
-                color: darkMode ? 'var(--white)' : '',
+                background: darkMode ? 'var(--night)' : '',
+                color: darkMode ? 'var(--white)' : 'var(--night)',
             }}
         >
             <Navbar />
             <Intro />
-            {/* <Info /> */}
+            <Info />
             <Portfolio />
-            {/* <Slick /> */}
         </div>
     );
 }
