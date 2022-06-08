@@ -8,7 +8,7 @@ function FavouriteItem({ api }) {
         <div className={cx('wrapper')}>
         {api.map((favourite, index) => (
             <div className={cx('favourite-container')} key={index} >
-                <img src={favourite.image} className={cx('favourite-image')} />
+                <img src={favourite.image} className={cx('favourite-image')} alt={favourite.alt} />
                 <div className={cx('favourite-content')}>
                     <h4 className={cx('favourite-title')}>{favourite.title}</h4>
                     <p className={cx('favourite-desc')}>{favourite.desc}</p>

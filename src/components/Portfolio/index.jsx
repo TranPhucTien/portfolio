@@ -12,6 +12,7 @@ import { itemsAPI } from './ItemAPI';
 import styles from './Portfolio.module.scss';
 import Item from './components/Item';
 import { useContext, useRef } from 'react';
+import click from '~/assets/audio/click.mp3';
 import { ThemeContext } from '~/ThemeContext';
 
 const cx = classNames.bind(styles);
@@ -20,6 +21,13 @@ function Portfolio() {
     const slideRef = useRef(null);
     const themeContext = useContext(ThemeContext);
     const darkMode = themeContext.darkMode;
+
+    const clickSound = new Audio();
+    clickSound.src = click;
+
+    const handleClick = () => {
+        clickSound.play();
+    };
 
     const config = {
         centerMode: true,
@@ -62,10 +70,10 @@ function Portfolio() {
             </div>
             <Slider {...config}>
                 {itemsAPI.map((item, index) => (
-                    <Item key={index} image={item.image} title={item.title} desc={item.desc} tags={item.tags} />
+                    <Item key={index} image={item.image} title={item.title} desc={item.desc} tags={item.tags} onClick={handleClick} />
                 ))}
             </Slider>
-            <div className={cx('navigation')}>
+            <div className={cx('navigation')} onClick={handleClick}>
                 <button className={classNames('button-border button-primary', styles.btn)}>
                     <FontAwesomeIcon
                         icon={faArrowLeft}

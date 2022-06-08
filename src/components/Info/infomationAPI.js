@@ -43,31 +43,37 @@ export const myTargetAPI = [
 export const myFavouriteAPI = [
     {
         image: 'https://images.pexels.com/photos/5767580/pexels-photo-5767580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+        alt: 'Cầu lông',
         title: 'Chơi cầu lông',
-        desc: 'Cầu lông là một trò chơi khá dễ để tổ chức (Chỉ cần 2 cái vợt và một khoảng sân vừa đủ). Nhưng quan trọng là kiếm đâu ra một bạn nữ chơi cùng :(('
+        desc: 'Cầu lông là một trò chơi khá dễ để tổ chức (Chỉ cần 2 cái vợt và một khoảng sân vừa đủ). Nhưng quan trọng là kiếm đâu ra một bạn nữ chơi cùng 😭)'
     },
     {
         image: 'https://images.pexels.com/photos/260024/pexels-photo-260024.jpeg?auto=compress&cs=tinysrgb&w=600',
+        alt: 'Đánh cờ',
         title: 'Đánh cờ',
-        desc: 'Cờ là một môn đòi hỏi yếu tố kiên nhân và tính chiến thuật cao. Mình có thể đánh khá nhiều loại cờ nhưng mà kĩ năng thì hơi ...'
+        desc: 'Cờ là một môn đòi hỏi yếu tố kiên nhân và tính chiến thuật cao.'
     },
     {
         image: 'https://gametop.vn/wp-content/uploads/2022/02/https-lh6-googleusercontent-com-ruaqnr_bjyc5wpdv.jpeg',
+        alt: 'game',
         title: 'Chơi game',
         desc: 'Chơi game luôn là một điều gì rất thú vị sau khi học tập và làm việc căng thăng (Nếu thua nhiều thì lại là một vấn đề khác^^)'
     },
     {
         image: 'https://i.pinimg.com/474x/01/16/31/0116311f16069785ded99bb5536bcda4.jpg',
+        alt: 'anime',
         title: 'Japanese anime vietsub',
         desc: 'Anime có lẽ là một trong những tuổi thơ của rất nhiều người và mình cũng thế'
     },
     {
         image: 'https://images.pexels.com/photos/1921336/pexels-photo-1921336.jpeg?auto=compress&cs=tinysrgb&w=600',
+        alt: 'thiên nhiên',
         title: 'Thơ thẩn, thẩn thơ',
         desc: 'Chỉ là chìm đắm vào một không gian của riêng mình và ngắm cảnh vật xung quanh thôi^^'
     },
     {
         image: 'https://images.pexels.com/photos/159866/books-book-pages-read-literature-159866.jpeg?auto=compress&cs=tinysrgb&w=600',
+        alt: 'sách',
         title: 'Đọc sách',
         desc: 'Chủ đề của sách rất là rộng nhưng mình thích đọc tiếu thuyết và truyện hơn'
     },

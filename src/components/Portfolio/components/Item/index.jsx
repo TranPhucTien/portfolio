@@ -8,12 +8,12 @@ import { ThemeContext } from '~/ThemeContext';
 
 const cx = classNames.bind(styles);
 
-function Item({ image, title, desc, tags }) {
+function Item({ image, title, desc, tags, onClick }) {
     const themeContext = useContext(ThemeContext);
     const darkMode = themeContext.darkMode;
 
     return (
-        <div className={cx('wrapper')}>
+        <div className={cx('wrapper')} onClick={onClick}>
             <div
                 className={classNames(styles.container)}
                 style={darkMode ? { backgroundColor: '#FAD4D4' } : { color: '' }}
