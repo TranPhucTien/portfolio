@@ -15,9 +15,9 @@ function ButtonSelection({ nameLottie, component, title, path, index }) {
     const clickSound = new Audio();
     clickSound.src = click;
 
-    const handleClick = () => {
+    const handleClick = (e) => {
         clickSound.play();
-    }
+    };
 
     return (
         <NavLink
