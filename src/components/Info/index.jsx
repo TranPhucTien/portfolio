@@ -1,9 +1,12 @@
+import { Routes, Route } from 'react-router-dom';
 import { useContext } from 'react';
 import classNames from 'classnames/bind';
-import Infomation from './components/Infomation';
+import Profile from './pages/Profile';
 import Selection from './components/Selection';
 import styles from './Info.module.scss';
 import { ThemeContext } from '~/ThemeContext';
+import Target from './pages/Target';
+import Favourite from './pages/Favourite';
 
 const cx = classNames.bind(styles);
 
@@ -23,7 +26,7 @@ function Info() {
                 <div
                     className={cx('selection')}
                     style={{
-                        background: darkMode ? ' rgba(255, 255, 255, 0.3)' : 'rgba(255, 255, 255, 0.5)',
+                        background: darkMode ? 'rgb(120, 88, 166)' : 'rgba(255, 255, 255, 0.5)',
                     }}
                 >
                     <Selection />
@@ -31,10 +34,14 @@ function Info() {
                 <div
                     className={cx('show')}
                     style={{
-                        background: darkMode ? ' rgba(255, 255, 255, 0.3)' : 'rgba(255, 255, 255, 0.5)',
+                        background: darkMode ? 'rgb(120, 88, 166)' : 'rgba(255, 255, 255, 0.5)',
                     }}
                 >
-                    <Infomation />
+                    <Routes>
+                        <Route path="/" element={<Profile />} />
+                        <Route path="/target" element={<Target />} />
+                        <Route path='/favourite' element={<Favourite />} />
+                    </Routes>
                 </div>
             </div>
         </div>

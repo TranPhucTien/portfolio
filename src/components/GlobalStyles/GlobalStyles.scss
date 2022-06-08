@@ -1,4 +1,5 @@
 @import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
     --primary: rgb(254, 44, 85);
@@ -16,7 +17,7 @@
     --background-darker: rgba(254, 44, 85, 0.1);
     --background-dark: rgba(254, 44, 85, 0.6);
 
-    --font-family: 'ProximaNova', sans-serif;
+    --font-family: 'Poppins', sans-serif;
 
     --header-height: 64px;
 }
@@ -67,33 +68,9 @@ html *::-webkit-scrollbar-track {
 
 // Fonts emmbeded
 @font-face {
-    font-family: ProximaNova;
-    src: url('/assets/fonts/Proxima-Nova-Regular.woff2');
-    font-weight: 400;
-}
-@font-face {
-    font-family: ProximaNova;
-    src: url('/assets/fonts/ProximaNova-Semibold.woff2');
-    font-weight: 600;
-}
-@font-face {
-    font-family: ProximaNova;
-    src: url('/assets/fonts/Proxima-Nova-Bold.woff');
-    font-weight: 700;
-}
-@font-face {
-    font-family: SofiaPro;
-    src: url('/assets/fonts/sofiapro-bold.woff');
-    font-weight: 700;
-}
-@font-face {
     font-family: Gumela;
     src: url('/assets/fonts/Gumela-Regular.otf');
     font-weight: normal;
-}
-@font-face {
-    font-family: Poppin;
-    src: url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
 }
 
 img {
@@ -109,6 +86,10 @@ hr {
     border: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 button {
     user-select: none;
 }
@@ -118,7 +99,7 @@ input,
 [tabindex] {
     border: none;
     outline: none;
-    font-family: var(--primary);
+    font-family: var(--font-family);
 }
 
 .button {
@@ -142,6 +123,7 @@ input,
     padding: 9px 18px;
     border: 1px solid transparent;
     transition: all 0.25s linear;
+    text-align: center;
 
     &-primary {
         background: linear-gradient(180deg, var(--primary) 26.71%, #ff4b2b 99.36%);
@@ -218,8 +200,7 @@ input,
 
 .title-header {
     font-size: 5rem;
-    font-weight: 700;
-    font-family: SofiaPro;
+    font-weight: 600;
     line-height: 1.2;
 }
 
@@ -259,6 +240,12 @@ input,
 // Swiper
 .swiper-slide {
     width: 100%;
+}
+
+.active-selection {
+    background: linear-gradient(135deg, rgb(255, 85, 232), rgb(250, 189, 243), rgb(253, 223, 250));
+    box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px,
+        rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
 }
 
 // Ipad

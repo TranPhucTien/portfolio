@@ -1,50 +1,22 @@
 import classNames from 'classnames/bind';
-// import Swiper JS
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper';
-// import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-
-import Quote from '../Quote';
-import quotes from '../Quote/quotesAPI';
 import styles from './Infomation.module.scss';
-import { myProfileDesc } from '../../infomationAPI';
 
 const cx = classNames.bind(styles);
 
-function Infomation() {
+function Infomation({ api, title }) {
     return (
         <div className={cx('wrapper')}>
-            <div className={cx('container')}>
-                <h2 className={cx('title')}>Giới thiệu!</h2>
-                <div className={cx('content')}>
-                    {myProfileDesc.map((profile, index) => (
-                        <p className={cx('description')} key={index}>
-                            {profile.desc}
+            <h2 className={cx('title')}>{title}</h2>
+            <div className={cx('content')}>
+                {api.map((profile, index) => (
+                    <div key={index} className={cx('api-wrapper')}>
+                        <p className={cx('api-title')}>
+                            {profile.title}
+                            {profile.status && <span className={cx('api-status')}> ({profile.status})</span>}
                         </p>
-                    ))}
-                </div>
-                <div className={cx('slide', 'mt-32')}>
-                    <h2 className={cx('title')}>Một số câu nói mình rất thích</h2>
-                    <Swiper
-                        pagination={{
-                            clickable: true,
-                        }}
-                        autoplay={{
-                            delay: 7000,
-                            disableOnInteraction: false,
-                        }}
-                        slidesPerView={'auto'}
-                        modules={[Autoplay, Pagination, Navigation]}
-                    >
-                        {quotes.map((quote, index) => (
-                            <SwiperSlide key={index}>
-                                <Quote image={quote.image} name={quote.name} desc={quote.desc} />
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-                </div>
+                        {profile.desc && <p className={cx('api-desc')}>{profile.desc}</p>}
+                    </div>
+                ))}
             </div>
         </div>
     );

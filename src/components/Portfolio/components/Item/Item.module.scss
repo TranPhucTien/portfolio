@@ -7,10 +7,9 @@
 .container {
     gap: 1rem;
     max-width: 100%;
-    // min-height: 560px;
-    // max-height: 570px;
     padding: 16px 0;
     max-height: 512px;
+    min-height: 500px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -39,7 +38,7 @@
     }
 
     &-desc {
-        font-size: 2rem;
+        font-size: 1.6rem;
         color: #7c8594;
         margin-bottom: 0.5rem;
 
@@ -55,8 +54,9 @@
     display: flex;
     align-items: center;
     margin-bottom: 12px;
-    flex-wrap: wrap;
     max-width: 100%;
+    overflow: hidden;
+    flex-wrap: nowrap;
 
     &-item {
         font-size: 1.4rem;
@@ -82,7 +82,7 @@
 
 .button {
     width: 100%;
-    font-weight: 700;
+    font-weight: 600;
     border-radius: 13px;
 
     &-code {

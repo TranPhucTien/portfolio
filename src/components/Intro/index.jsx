@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import { faGithub, faFacebook, faFacebookMessenger } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faFacebook, faDiscord } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import styles from './Intro.module.scss';
@@ -12,22 +12,24 @@ function Intro() {
         <div className={classNames(styles.wrapper, 'container')}>
             <div className={cx('content')}>
                 <div className={cx('content-title')}>
-                    <span className={cx('content-hello')}>Xin chào! Mình là </span>
-                    <span className={cx('content-name')}>Trần Phúc Tiến</span>
+                    <h2 className={cx('content-hello')}>Xin chào!</h2>
+                    <h2 className={cx('content-name')}>Mình tên là Tiến</h2>
                 </div>
                 <div className={cx('content-desc')}>
                     Hiện tại mình là một front-end developer và sẽ trở thành fullstack-developer ^^
                 </div>
-                <button className={classNames(styles.button, 'button button-shadow button-border button-primary')}>
+                <a href='https://www.facebook.com/tranphuctien2003/' className={classNames(styles.button, 'button button-shadow button-border button-primary')}>
                     Kết nối với mình
-                </button>
+                </a>
                 <div className={cx('icons')}>
-                    <FontAwesomeIcon icon={faGithub} className={cx('icon', 'fill-shadow-large', 'cursor-pointer')} />
-                    <FontAwesomeIcon icon={faFacebook} className={cx('icon', 'fill-shadow', 'cursor-pointer')} />
-                    <FontAwesomeIcon
-                        icon={faFacebookMessenger}
-                        className={cx('icon', 'fill-shadow', 'cursor-pointer')}
-                    />
+                    <a href='https://github.com/TranPhucTien/'><FontAwesomeIcon icon={faGithub} className={cx('icon', 'fill-shadow-large', 'cursor-pointer')} /></a>
+                    <a href='https://www.facebook.com/tranphuctien2003/'><FontAwesomeIcon icon={faFacebook} className={cx('icon', 'fill-shadow', 'cursor-pointer')} /></a>
+                    <a href='http://discordapp.com/users/691483254393536512'>
+                        <FontAwesomeIcon
+                            icon={faDiscord}
+                            className={cx('icon', 'fill-shadow', 'cursor-pointer')}
+                        />
+                    </a>
                 </div>
             </div>
             <div className={cx('image')}>

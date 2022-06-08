@@ -4,17 +4,20 @@ const selectionAPI = [
     {
         nameLottie: 'profile',
         title: 'Bản thân',
-        nameComponent: <ProfileLottie/>
+        nameComponent: <ProfileLottie/>,
+        path: '/'
     },
     {
         nameLottie: 'target',
         title: 'Mục tiêu',
-        nameComponent: <TargetLottie/>
+        nameComponent: <TargetLottie/>,
+        path: '/target'
     },
     {
         nameLottie: 'favourite',
         title: 'Yêu thích',
-        nameComponent: <FavouriteLottie/>
+        nameComponent: <FavouriteLottie/>,
+        path: '/favourite'
     },
 ]
 

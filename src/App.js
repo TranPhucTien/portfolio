@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Info from './components/Info';
 import Intro from './components/Intro';
 import Navbar from './components/Navbar';
@@ -17,18 +18,20 @@ function App() {
     }
 
     return (
-        <div
-            className={'wrapper'}
-            style={{
-                background: darkMode ? 'var(--night)' : '',
-                color: darkMode ? 'var(--white)' : 'var(--night)',
-            }}
-        >
-            <Navbar />
-            <Intro />
-            <Info />
-            <Portfolio />
-        </div>
+        <Router>
+            <div
+                className={'wrapper'}
+                style={{
+                    background: darkMode ? 'var(--night)' : '',
+                    color: darkMode ? 'var(--white)' : 'var(--night)',
+                }}
+            >
+                <Navbar />
+                <Intro />
+                <Info />
+                <Portfolio />
+            </div>
+        </Router>
     );
 }
 

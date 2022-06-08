@@ -58,8 +58,7 @@ function Portfolio() {
                     <hr />
                     <h5 className={'sub-header'}>Portfolio</h5>
                 </div>
-                <h4 className={cx('title-header')}>Một số thứ</h4>
-                <h4 className={cx('title-header')}>Mình đã làm ...</h4>
+                <h4 className={cx('title-header')}>Mình đã làm </h4>
             </div>
             <Slider {...config}>
                 {itemsAPI.map((item, index) => (

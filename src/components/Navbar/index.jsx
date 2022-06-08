@@ -16,7 +16,6 @@ function Navbar() {
                 <li className={cx('menu-item')}>About</li>
                 <li className={cx('menu-item')}>Work</li>
             </ul>
-        <button className={classNames(styles.button, 'button button-primary button-shadow button-border')}>Contact</button>
         </div>
     </header>;
 }

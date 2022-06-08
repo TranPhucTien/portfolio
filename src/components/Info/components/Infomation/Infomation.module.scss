@@ -1,5 +1,5 @@
 .wrapper {
-    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .title {
@@ -7,26 +7,29 @@
     margin-bottom: 2rem;
 }
 
-.content {
-    gap: 3rem;
-    display: grid;
-}
-
-.description {
-    font-size: 1.6rem;
-    border-left: 2px solid var(--primary);
-    padding-left: 8px;
-    line-height: 1.4;
-
-    &::before {
-        content: "";
+.api {
+    &-title {
+        font-size: 1.6rem;
+        border-left: 2px solid var(--primary);
+        padding-left: 8px;
+        line-height: 1.4;
+        font-weight: 500;
     }
-}
 
-.slide {
-    max-width: 100%;
-}
+    &-wrapper + &-wrapper {
+        margin-top: 2rem;
+    }
 
-.mt-32 {
-    margin-top: 32px;
+    &-status {
+        color: var(--primary);
+        font-weight: 400;
+    }
+
+    &-title + &-desc {
+        margin: 1rem 0 1rem 3rem;
+        border-left: 2px solid currentColor;
+        color: var(--text-color);
+        padding-left: 8px;
+        line-height: 1.4;
+    }
 }
