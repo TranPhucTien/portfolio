@@ -53,3 +53,22 @@
 .lottie {
     padding: 0 20px;
 }
+
+// Mobile
+@media only screen and (max-width: 739px) {
+    .button {
+        max-width: 100px;
+        width: 30%;
+        height: auto;
+    }
+    .title {
+        font-size: 1.6rem;
+    }
+}
+
+// Mobile S
+@media only screen and (max-width: 739px) {
+    .title {
+        font-size: 1.2rem;
+    }
+}

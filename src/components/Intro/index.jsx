@@ -16,15 +16,15 @@ function Intro() {
                     <h2 className={cx('content-name')}>Mình tên là Tiến</h2>
                 </div>
                 <div className={cx('content-desc')}>
-                    Hiện tại mình là một front-end developer và sẽ trở thành fullstack-developer ^^
+                    Hiện tại mình là một frontEnd-developer và sẽ trở thành fullstack-developer ^^
                 </div>
-                <a href='https://www.facebook.com/tranphuctien2003/' className={classNames(styles.button, 'button button-shadow button-border button-primary')}>
+                <a target={'_blank'}  rel="noreferrer" href='https://www.facebook.com/tranphuctien2003/' className={classNames(styles.button, 'button button-shadow button-border button-primary')}>
                     Kết nối với mình
                 </a>
                 <div className={cx('icons')}>
-                    <a href='https://github.com/TranPhucTien/'><FontAwesomeIcon icon={faGithub} className={cx('icon', 'fill-shadow-large', 'cursor-pointer')} /></a>
-                    <a href='https://www.facebook.com/tranphuctien2003/'><FontAwesomeIcon icon={faFacebook} className={cx('icon', 'fill-shadow', 'cursor-pointer')} /></a>
-                    <a href='http://discordapp.com/users/691483254393536512'>
+                    <a target={'_blank'}  rel="noreferrer" href='https://github.com/TranPhucTien/'><FontAwesomeIcon icon={faGithub} className={cx('icon', 'fill-shadow-large', 'cursor-pointer')} /></a>
+                    <a target={'_blank'}  rel="noreferrer" href='https://www.facebook.com/tranphuctien2003/'><FontAwesomeIcon icon={faFacebook} className={cx('icon', 'fill-shadow', 'cursor-pointer')} /></a>
+                    <a target={'_blank'}  rel="noreferrer" href='http://discordapp.com/users/691483254393536512'>
                         <FontAwesomeIcon
                             icon={faDiscord}
                             className={cx('icon', 'fill-shadow', 'cursor-pointer')}

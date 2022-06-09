@@ -41,3 +41,23 @@
 .button {
     margin-left: 4rem;
 }
+
+@media only screen and (max-width: 739px) {
+    .wrapper {
+        border-bottom: 1px solid #333;
+    }
+    .menu-list {
+        display: none;
+    }
+    .left {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+    .wrapper {
+        border-bottom: 1px solid #333;
+    }
+}

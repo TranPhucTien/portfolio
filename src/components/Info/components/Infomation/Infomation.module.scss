@@ -16,8 +16,13 @@
         font-weight: 500;
     }
 
+    &-title + &-title,
     &-wrapper + &-wrapper {
         margin-top: 2rem;
+    }
+
+    &-title + &-title {
+        font-weight: 400;
     }
 
     &-status {
@@ -31,5 +36,25 @@
         color: var(--text-color);
         padding-left: 8px;
         line-height: 1.4;
+    }
+}
+
+// Tablet
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+}
+
+// Mobile
+@media only screen and (max-width: 739px) {
+    .title {
+        font-size: 1.8rem;
+    }
+    .api {
+        &-title {
+            font-size: 1.4rem;
+            letter-spacing: -0.5px;
+        }
+        &-desc {
+            font-size: 1.4rem;
+        }
     }
 }

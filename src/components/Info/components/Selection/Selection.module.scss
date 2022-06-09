@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
 }
 
 .container {
@@ -10,4 +11,34 @@
     justify-content: center;
     gap: 20px;
     padding: 20px;
+}
+
+// Tablet and mobile
+@media only screen and (max-width: 1024px) {
+    .container {
+        flex-direction: row;
+    }
+}
+
+// Mobile
+@media only screen and (max-width: 739px) {
+    .wrapper {
+        display: grid;
+        justify-content: flex-start;
+        grid-auto-flow: column;
+        grid-gap: 1rem;
+        overflow: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: always;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        -webkit-overflow-scrolling: touch;
+        scroll-padding: 20px;
+        grid-template-columns: unset;
+    }
+    .container {
+        width: 100vw;
+        padding: 10px 20px;
+    }
 }

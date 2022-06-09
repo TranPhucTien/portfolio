@@ -17,28 +17,26 @@ const cx = classNames.bind(styles);
 function Profile() {
     return (
         <div className={cx('wrapper')}>
-            <div className={cx('container')}>
-                <Infomation api={myProfileDesc} title={'Giới thiệu!'} />
-                <div className={cx('slide', 'mt-32')}>
-                    <h2 className={cx('title')}>Một số câu nói mình rất thích</h2>
-                    <Swiper
-                        pagination={{
-                            clickable: true,
-                        }}
-                        autoplay={{
-                            delay: 7000,
-                            disableOnInteraction: false,
-                        }}
-                        slidesPerView={'auto'}
-                        modules={[Autoplay, Pagination, Navigation]}
-                    >
-                        {quotes.map((quote, index) => (
-                            <SwiperSlide key={index}>
-                                <Quote image={quote.image} name={quote.name} desc={quote.desc} />
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-                </div>
+            <Infomation api={myProfileDesc} title={'Giới thiệu!'} />
+            <div className={cx('slide', 'mt-32')}>
+                <h2 className={cx('title')}>Một số câu nói mình rất thích</h2>
+                <Swiper
+                    pagination={{
+                        clickable: true,
+                    }}
+                    autoplay={{
+                        delay: 7000,
+                        disableOnInteraction: false,
+                    }}
+                    slidesPerView={'auto'}
+                    modules={[Autoplay, Pagination, Navigation]}
+                >
+                    {quotes.map((quote, index) => (
+                        <SwiperSlide key={index}>
+                            <Quote image={quote.image} name={quote.name} desc={quote.desc} />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </div>
         </div>
     );

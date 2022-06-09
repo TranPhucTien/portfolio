@@ -1,3 +1,4 @@
+import React from 'react';
 import classNames from 'classnames/bind';
 import styles from './Infomation.module.scss';
 
@@ -9,13 +10,22 @@ function Infomation({ api, title }) {
             <h2 className={cx('title')}>{title}</h2>
             <div className={cx('content')}>
                 {api.map((profile, index) => (
-                    <div key={index} className={cx('api-wrapper')}>
-                        <p className={cx('api-title')}>
-                            {profile.title}
-                            {profile.status && <span className={cx('api-status')}> ({profile.status})</span>}
-                        </p>
-                        {profile.desc && <p className={cx('api-desc')}>{profile.desc}</p>}
-                    </div>
+                    <React.Fragment key={index}>
+                        {profile.desc ? (
+                            <div className={cx('api-wrapper')}>
+                                <p className={cx('api-title')}>
+                                    {profile.title}
+                                    {profile.status && <span className={cx('api-status')}> ({profile.status})</span>}
+                                </p>
+                                {<p className={cx('api-desc')}>{profile.desc}</p>}
+                            </div>
+                        ) : (
+                            <p className={cx('api-title')}>
+                                {profile.title}
+                                {profile.status && <span className={cx('api-status')}> ({profile.status})</span>}
+                            </p>
+                        )}
+                    </React.Fragment>
                 ))}
             </div>
         </div>

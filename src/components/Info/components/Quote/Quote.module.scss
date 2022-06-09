@@ -25,3 +25,19 @@
 .description {
     font-size: 1.6rem;
 }
+
+// Mobile
+@media only screen and (max-width: 739px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .name {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .description {
+        font-size: 1.4rem;
+        letter-spacing: -0.5px;
+    }
+}

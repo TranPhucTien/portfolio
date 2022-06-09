@@ -1,3 +1,11 @@
 .wrapper {
     padding: 20px;
 }
+
+// Mobile
+@media only screen and (max-width: 739px) {
+    .wrapper {
+        padding: 16px;
+        overflow: hidden;
+    }
+}

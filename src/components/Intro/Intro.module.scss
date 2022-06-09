@@ -17,7 +17,8 @@
     &-name {
         color: var(--primary);
     }
-    &-name, &-hello {
+    &-name,
+    &-hello {
         font-weight: 600;
     }
     &-desc {
@@ -58,29 +59,63 @@
     filter: var(--filter-shadow-large);
 }
 
-@media only screen and (max-width: 1024px) {
-    // .wrapper {
-    // }
-    .intro {
-        &-name,
-        &-hello {
-            font-size: 4.5rem;
+// tablet
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+    .wrapper {
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+        height: calc(100vh - var(--header-height));
+    }
+    .content {
+        &-title {
+            font-size: 2.4rem;
+            line-height: 1.4;
         }
         &-desc {
             font-size: 1.8rem;
+            padding: 20px 0 30px;
         }
+    }
+    .button {
+        max-width: 200px;
+        width: 200px;
+    }
+    .icons {
+        margin: 5rem 0;
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 739px) {
     .wrapper {
         display: flex;
         flex-direction: column;
+        margin-top: 2rem;
     }
-    .intro {
-        align-items: center;
-        justify-content: space-between;
-        margin: 0 auto;
-        
+    .content {
+        display: flex;
+        align-items: left;
+
+        &-title {
+            font-size: 2rem;
+            line-height: 1.4;
+        }
+
+        &-desc {
+            font-size: 1.6rem;
+            padding: 20px 0 30px;
+        }
+    }
+    .button {
+        max-width: 200px;
+        padding-top: 4px;
+        width: 200px;
+    }
+    .icons {
+        margin-top: 4rem;
+    }
+    .icon {
+        width: 40px;
+        height: 40px;
     }
 }

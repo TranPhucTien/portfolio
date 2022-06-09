@@ -34,7 +34,6 @@ function Portfolio() {
         focusOnSelect: true,
         infinite: true,
         slidesToShow: 3,
-        initialSlide: 2,
         slidesToScroll: 1,
         speed: 500,
         variableWidth: true,
@@ -45,15 +44,21 @@ function Portfolio() {
         draggable: false,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1050,
                 settings: {
                     slidesToShow: 2,
                 },
             },
             {
-                breakpoint: 620,
+                breakpoint: 1023,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 739,
+                settings: {
+                    slidesToShow: 0.2,
                 },
             },
         ],
