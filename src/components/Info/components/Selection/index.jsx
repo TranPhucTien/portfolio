@@ -5,8 +5,7 @@ import selectionAPI from './selectionAPI';
 
 const cx = classNames.bind(styles);
 
-function Selection() {
-
+function Selection({ onClick }) {
     return (
         <div className={cx('wrapper')}>
             <div className={classNames(styles.container)}>
@@ -19,6 +18,7 @@ function Selection() {
                             key={index}
                             path={selection.path}
                             index={index}
+                            onClick={onClick}
                         />
                     );
                 })}

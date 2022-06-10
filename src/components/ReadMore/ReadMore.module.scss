@@ -1,11 +1,12 @@
-.container {
-    position: absolute;
-    top: 10%;
-    left: 23%;
-    width: 50%;
-}
-
 .read-or-hide {
     color: #333;
+    font-weight: 500;
     cursor: pointer;
+    padding: 6px 16px;
+    background-color: transparent;
+    text-decoration: underline;
+
+    &:hover {
+        color: rgb(76, 146, 244);
+    }
 }

@@ -1,32 +1,43 @@
+import musicPlayer from '~/assets/images/musicPlayer.png'
+import beyond from '~/assets/images/Beyond.png'
+import helling from '~/assets/images/helling.png'
+import light from '~/assets/images/light.png'
+import portfolio from '~/assets/images/portfolio.png'
+
 export const itemsAPI = [
     {
-        image: 'https://images.unsplash.com/photo-1654248568718-724570b7b257?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60',
-        title: 'Sharkie',
+        image: portfolio,
+        title: 'Portfolio',
+        tags: ['ReactJS', 'JavaScript', 'HTML', 'CSS'],
+        desc: 'Là trang web các bạn đang xem nè',
+        href: 'https://portfolio-alpha-one-91.vercel.app/'
+    },
+    {
+        image: musicPlayer,
+        title: 'Music Player',
         tags: ['JavaScript', 'HTML', 'CSS'],
-        desc: 'JavaScript based jump-and-run game',
+        desc: 'Một trình phát nhạc có đầy đủ các chức năng',
+        href: 'https://tranphuctien.github.io/music_player/'
     },
     {
-        image: 'https://images.unsplash.com/photo-1654124803458-20772ab08c39?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60',
-        title: 'Join',
-        tags: ['JavaScript', 'Backend', 'HTML', 'CSS'],
-        desc: 'Group managment tool to optimize workflows',
+        image: beyond,
+        title: 'Beyon.',
+        tags: ['Pug', 'Sass', 'HTML', 'CSS'],
+        desc: 'Một website để mình luyện Pug và SASS',
+        href: 'https://tranphuctien.github.io/Beyond./'
     },
     {
-        image: 'https://david-hckh.com/images/projects/pokedex.jpg',
-        title: 'Pokedex',
-        tags: ['JavaScript', 'API', 'HTML', 'CSS'],
-        desc: 'A collection and description of all 898 Pokémon',
+        image: helling,
+        title: 'Helling',
+        tags: ['SASS', 'HTML', 'CSS'],
+        desc: 'Mình Luyện SASS Và HTML, CSS',
+        href: 'https://tranphuctien.github.io/helling/'
     },
     {
-        image: 'https://david-hckh.com/images/projects/portfolio.jpg',
-        title: 'Portfolio 2022',
-        tags: ['JavaScript', 'WebGL', 'HTML', 'CSS'],
-        desc: 'A case study for this project is currently being written. Follow me on Twitter to stay up to date.',
-    },
-    {
-        image: 'https://david-hckh.com/images/projects/jelly-battle.jpg',
-        title: 'Jelly Battle',
-        tags: ['JavaScript', 'WebGL', 'HTML', 'CSS'],
-        desc: 'A case study for this project is currently being written. Follow me on Twitter to stay up to date.',
+        image: light,
+        title: 'Light',
+        tags: ['JavaScript', 'HTML', 'CSS'],
+        desc: 'Chỉ là một cái bóng đèn với chức năng bật tắt thôi^^',
+        href: 'https://tranphuctien.github.io/light/'
     },
 ];

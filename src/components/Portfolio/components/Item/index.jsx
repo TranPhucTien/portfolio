@@ -8,7 +8,7 @@ import { ThemeContext } from '~/ThemeContext';
 
 const cx = classNames.bind(styles);
 
-function Item({ image, title, desc, tags, onClick }) {
+function Item({ image, title, desc, tags, href, onClick }) {
     const themeContext = useContext(ThemeContext);
     const darkMode = themeContext.darkMode;
 
@@ -42,7 +42,7 @@ function Item({ image, title, desc, tags, onClick }) {
                     <button className={classNames('button-secondary')}>
                         <FontAwesomeIcon icon={faCode} className={cx('button-code')} />
                     </button>
-                    <button className={classNames('button-primary', styles.button)}>Live View</button>
+                    <a href={href} target="_blank" rel="noreferrer" className={classNames('button-primary', styles.button)}>Live View</a>
                 </div>
             </div>
         </div>

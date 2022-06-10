@@ -1,6 +1,6 @@
 export const myProfileDesc = [
     {
-        title: 'Tháng 9/2020 mình quyết định đăng kí khối ngành công nghệ thông tin'
+        title: 'Tháng 9/2020 mình quyết định đăng ký khối ngành công nghệ thông tin'
     },
     {
         title: 'Tháng 10/2020 mình bắt đầu mượn máy chị và code những dòng code đầu tiền'
@@ -27,10 +27,10 @@ export const myTargetAPI = [
     {
         title: 'Học JavaScript nâng cao',
         status: 'Đang tiến hành',
-        desc: 'Nâng cao cũng chỉ là bắt đầu từ cơ bản. Nếu muốn học nâng cao trước, trước hết hãy nắm chắc cơ bản'
+        desc: 'Sơn Đặng: Nâng cao cũng chỉ là bắt đầu từ cơ bản. Nếu muốn học nâng cao trước, trước hết hãy nắm chắc cơ bản'
     },
     {
-        title: 'Học ReacJS',
+        title: 'Học ReactJS',
         status: 'Đang tiến hành',
         desc: 'ReactJS là một thư viện JavaScript mã nguồn mở được thiết kế bởi Facebook để tạo ra những ứng dụng web hấp dẫn, nhanh và hiệu quả với mã hóa tối thiểu. Mục đích cốt lõi của ReactJS không chỉ khiến cho trang web phải thật mượt mà còn phải nhanh, khả năng mở rộng cao và đơn giản.'
     },

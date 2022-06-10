@@ -10,19 +10,23 @@ function ReadMore({ children, maxTextContent }) {
     const themeContext = useContext(ThemeContext);
     const darkMode = themeContext.darkMode;
     const [isReadMore, setIsReadMore] = useState(true);
+
     const toggleReadMore = () => {
         setIsReadMore(!isReadMore);
+        console.log('click');
     };
 
     return (
         <>
             {isReadMore ? text.slice(0, maxTextContent) : text}
             {text.length > maxTextContent && (
-                <span onClick={toggleReadMore} className={cx('read-or-hide')}
-                    style={{color: darkMode ? '#333' : '#fff'}}
+                <button
+                    onClick={toggleReadMore}
+                    className={cx('read-or-hide')}
+                    style={{ color: darkMode ? '#333' : '#fff' }}
                 >
-                    {isReadMore ? '... more' : ' less'}
-                </span>
+                    {isReadMore ? '...Read more' : 'Read less'}
+                </button>
             )}
         </>
     );

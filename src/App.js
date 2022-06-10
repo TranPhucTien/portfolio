@@ -23,7 +23,7 @@ function App() {
                 className={'wrapper'}
                 style={{
                     background: darkMode ? 'var(--night)' : '',
-                    color: darkMode ? 'var(--white)' : 'var(--night)',
+                    color: darkMode ? 'var(--white)' : 'var(--text-color)',
                 }}
             >
                 <Navbar />

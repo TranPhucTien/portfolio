@@ -69,13 +69,21 @@ function Portfolio() {
             <div className={classNames(styles.container, 'container')}>
                 <div className={'sub-header-container'}>
                     <hr />
-                    <h5 className={'sub-header'}>Portfolio</h5>
+                    <h5 className={'sub-header'} id='work'>Portfolio</h5>
                 </div>
-                <h4 className={cx('title-header')}>Mình đã làm </h4>
+                <h4 className={'title-header'}>Mình đã làm </h4>
             </div>
             <Slider {...config}>
                 {itemsAPI.map((item, index) => (
-                    <Item key={index} image={item.image} title={item.title} desc={item.desc} tags={item.tags} onClick={handleClick} />
+                    <Item
+                        key={index}
+                        image={item.image}
+                        title={item.title}
+                        desc={item.desc}
+                        tags={item.tags}
+                        href={item.href}
+                        onClick={handleClick}
+                    />
                 ))}
             </Slider>
             <div className={cx('navigation')} onClick={handleClick}>

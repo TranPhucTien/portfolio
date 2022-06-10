@@ -6,7 +6,7 @@
     --black: #000;
     --night: #0d1117;
     --white: #fff;
-    --text-color: rgb(22 24 35);
+    --text-color: #091434;
 
     --box-shadow: 0px 20px 24px 3px rgba(255, 75, 43, 0.2);
     --filter-shadow: drop-shadow(2px 20px 21px rgba(255, 75, 43, 0.6));
@@ -29,12 +29,14 @@
 
 * {
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
     padding: 0;
     margin: 0;
 }
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -93,6 +95,7 @@ hr {
 
 a {
     text-decoration: none;
+    color: unset;
 }
 
 button {
@@ -254,7 +257,7 @@ input,
 }
 
 // Tablet
-@media only screen and  (min-width: 740px) and (max-width: 1023px) {
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
     .button {
         padding: 4px 8px;
     }
@@ -264,5 +267,9 @@ input,
 @media only screen and (max-width: 739px) {
     .button {
         padding: 4px 8px;
+    }
+    .title-header {
+        font-size: 4rem;
+        text-align: center;
     }
 }
