@@ -10,17 +10,17 @@ const cx = classNames.bind(styles);
 
 function Item({ image, title, desc, tags, href, onClick }) {
     const themeContext = useContext(ThemeContext);
-    const darkMode = themeContext.darkMode;
+    const lightMode = themeContext.lightMode;
 
     return (
         <div className={cx('wrapper')} onClick={onClick}>
             <div
                 className={classNames(styles.container)}
-                style={darkMode ? { backgroundColor: '#FAD4D4' } : { color: '' }}
+                style={lightMode ? { color: '' } : { backgroundColor: '#FAD4D4' }}
             >
                 <img src={image} alt="" className={cx('img')} />
                 <div className={cx('content')}>
-                    <h3 className={cx('content-title')} style={darkMode ? { color: 'var(--black)' } : { color: '' }}>
+                    <h3 className={cx('content-title')} style={lightMode ? { color: '' } : { color: 'var(--black)' }}>
                         {title}
                     </h3>
                     <div className={cx('tag')}>
@@ -28,13 +28,13 @@ function Item({ image, title, desc, tags, href, onClick }) {
                             <div
                                 className={cx('tag-item')}
                                 key={index}
-                                style={darkMode ? { color: '#0d1137', borderColor: '#0d1137' } : { color: '' }}
+                                style={lightMode ? { color: '' } : { color: '#0d1137', borderColor: '#0d1137' }}
                             >
                                 {tag}
                             </div>
                         ))}
                     </div>
-                    <p className={cx('content-desc')} style={darkMode ? { color: '#666' } : { color: '' }}>
+                    <p className={cx('content-desc')} style={lightMode ? { color: '' } : { color: '#666' }}>
                         {desc}
                     </p>
                 </div>
@@ -42,7 +42,14 @@ function Item({ image, title, desc, tags, href, onClick }) {
                     <button className={classNames('button-secondary')}>
                         <FontAwesomeIcon icon={faCode} className={cx('button-code')} />
                     </button>
-                    <a href={href} target="_blank" rel="noreferrer" className={classNames('button-primary', styles.button)}>Live View</a>
+                    <a
+                        href={href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={classNames('button-primary', styles.button)}
+                    >
+                        Live View
+                    </a>
                 </div>
             </div>
         </div>
