@@ -82,6 +82,7 @@ function Portfolio() {
                         desc={item.desc}
                         tags={item.tags}
                         href={item.href}
+                        code={item.code}
                         onClick={handleClick}
                     />
                 ))}

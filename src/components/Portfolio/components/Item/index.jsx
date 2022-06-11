@@ -8,7 +8,7 @@ import { ThemeContext } from '~/ThemeContext';
 
 const cx = classNames.bind(styles);
 
-function Item({ image, title, desc, tags, href, onClick }) {
+function Item({ image, title, desc, tags, href, code, onClick }) {
     const themeContext = useContext(ThemeContext);
     const lightMode = themeContext.lightMode;
 
@@ -39,9 +39,9 @@ function Item({ image, title, desc, tags, href, onClick }) {
                     </p>
                 </div>
                 <div className={cx('buttons')}>
-                    <button className={classNames('button-secondary')}>
+                    <a href={code} target="_blank" className={classNames('button-secondary')}>
                         <FontAwesomeIcon icon={faCode} className={cx('button-code')} />
-                    </button>
+                    </a>
                     <a
                         href={href}
                         target="_blank"
