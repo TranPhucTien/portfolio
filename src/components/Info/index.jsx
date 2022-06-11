@@ -14,7 +14,7 @@ const cx = classNames.bind(styles);
 function Info() {
     const aboutRef = useRef(null);
     const themeContext = useContext(ThemeContext);
-    const darkMode = themeContext.darkMode;
+    const lightMode = themeContext.lightMode;
 
     const clickSound = new Audio();
     clickSound.src = click;
@@ -29,7 +29,7 @@ function Info() {
     };
 
     return (
-        <div className={cx('wrapper')} style={{ background: darkMode ? 'var(--night)' : 'var(--background-darker)' }}>
+        <div className={cx('wrapper')} style={{ background: lightMode ? 'var(--background-darker)' : 'var(--night)' }}>
             <div className={'container'}>
                 <div className={'sub-header-container'}>
                     <hr />
@@ -42,7 +42,7 @@ function Info() {
                 <div
                     className={cx('selection')}
                     style={{
-                        background: darkMode ? 'rgb(120, 88, 166)' : 'rgba(255, 255, 255, 0.5)',
+                        background: lightMode ? 'rgba(255, 255, 255, 0.5)' : 'rgb(120, 88, 166)',
                     }}
                 >
                     <Selection onClick={handleClick} />
@@ -50,7 +50,7 @@ function Info() {
                 <div
                     className={cx('show')}
                     style={{
-                        background: darkMode ? 'rgb(120, 88, 166)' : 'rgba(255, 255, 255, 0.5)',
+                        background: lightMode ? 'rgba(255, 255, 255, 0.5)' : 'rgb(120, 88, 166)',
                     }}
                 >
                     <Routes>

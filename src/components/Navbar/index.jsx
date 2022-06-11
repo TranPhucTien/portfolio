@@ -8,18 +8,18 @@ const cx = classNames.bind(styles);
 
 function Navbar() {
     const themeContext = useContext(ThemeContext);
-    const darkMode = themeContext.darkMode;
+    const lightMode = themeContext.lightMode;
 
     const mql = window.matchMedia('only screen and (max-width: 1023px)');
 
     let borderBottom = ''
 
-    if (mql.matches && darkMode) {
-        borderBottom = { borderBottom: '1px solid #333' };
+    if (mql.matches && lightMode) {
+        borderBottom = { borderBottom: '1px solid #eee' };
     } else if (mql.matches === false) {
         borderBottom = { borderBottom: 'none' };
     } else {
-        borderBottom = { borderBottom: '1px solid #eee' };
+        borderBottom = { borderBottom: '1px solid #333' };
     }
 
     return (

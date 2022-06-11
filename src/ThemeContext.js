@@ -4,23 +4,21 @@ const ThemeContext = createContext();
 
 function ThemeProvider({ children }) {
     const getTheme = () => {
-        return JSON.parse(localStorage.getItem('darkMode')) || true;
+        return JSON.parse(localStorage.getItem('lightMode')) || false;
     };
 
-    console.log(JSON.parse(localStorage.getItem('darkMode')));
+    const [lightMode, setDarkMode] = useState(getTheme());
 
-    const [darkMode, setDarkMode] = useState(getTheme());
-    
     const toggleTheme = () => {
-        setDarkMode(darkMode ? false : true);
+        setDarkMode(lightMode ? false : true);
     };
-    
+
     useEffect(() => {
-        localStorage.setItem('darkMode', JSON.stringify(darkMode))
-    }, [darkMode]);
+        localStorage.setItem('lightMode', JSON.stringify(lightMode));
+    }, [lightMode]);
 
     const value = {
-        darkMode,
+        lightMode,
         toggleTheme,
     };
 

@@ -20,7 +20,7 @@ const cx = classNames.bind(styles);
 function Portfolio() {
     const slideRef = useRef(null);
     const themeContext = useContext(ThemeContext);
-    const darkMode = themeContext.darkMode;
+    const lightMode = themeContext.lightMode;
 
     const clickSound = new Audio();
     clickSound.src = click;
@@ -65,7 +65,7 @@ function Portfolio() {
     };
 
     return (
-        <div className={cx('wrapper')} style={{ background: darkMode ? 'var(--night)' : 'var(--background)' }}>
+        <div className={cx('wrapper')} style={{ background: lightMode ? 'var(--background)' : 'var(--night)' }}>
             <div className={classNames(styles.container, 'container')}>
                 <div className={'sub-header-container'}>
                     <hr />

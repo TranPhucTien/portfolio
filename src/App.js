@@ -8,13 +8,13 @@ import { ThemeContext } from './ThemeContext';
 
 function App() {
     const themeContext = useContext(ThemeContext);
-    const darkMode = themeContext.darkMode;
+    const lightMode = themeContext.lightMode;
 
-    if (darkMode) {
-        document.body.style=`background-color: var(--black)`
+    if (lightMode) {
+        document.body.style=`background-color: var(--white)`
     }
     else {
-        document.body.style=`background-color: var(--white)`
+        document.body.style=`background-color: var(--black)`
     }
 
     return (
@@ -22,8 +22,8 @@ function App() {
             <div
                 className={'wrapper'}
                 style={{
-                    background: darkMode ? 'var(--night)' : '',
-                    color: darkMode ? 'var(--white)' : 'var(--text-color)',
+                    background: lightMode ? '' : 'var(--night)',
+                    color: lightMode ? 'var(--text-color)' : 'var(--white)',
                 }}
             >
                 <Navbar />
