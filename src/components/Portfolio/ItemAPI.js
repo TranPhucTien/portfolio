@@ -1,5 +1,5 @@
-import musicPlayer from '~/assets/images/musicPlayer.png'
-import beyond from '~/assets/images/Beyond.png'
+import musicPlayer from '~/assets/images/music_player.png'
+import beyond from '~/assets/images/beyond.png'
 import helling from '~/assets/images/helling.png'
 import light from '~/assets/images/light.png'
 import portfolio from '~/assets/images/portfolio.png'
