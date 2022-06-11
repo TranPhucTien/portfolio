@@ -39,8 +39,8 @@ function Item({ image, title, desc, tags, href, code, onClick }) {
                     </p>
                 </div>
                 <div className={cx('buttons')}>
-                    <a href={code} target="_blank" className={classNames('button-secondary')}>
-                        <FontAwesomeIcon icon={faCode} className={cx('button-code')} />
+                    <a href={code} target="_blank" rel="noreferrer" className={classNames('button-secondary', styles.buttonCode)}>
+                        <FontAwesomeIcon icon={faCode} className={cx('button-code-icon')} />
                     </a>
                     <a
                         href={href}

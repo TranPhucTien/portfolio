@@ -4,7 +4,6 @@
 
 .container {
     display: flex;
-    gap: 2rem;
     align-items: flex-start;
     margin-top: 2rem;
 }
@@ -13,6 +12,7 @@
     background: rgba(255, 255, 255, 0.7);
     border-radius: 20px;
     max-width: 100%;
+    margin-right: 2rem;
 }
 
 .show {
@@ -24,10 +24,6 @@
 
 // Mobile and tablet
 @media only screen and (max-width: 1024px) {
-    .container {
-        display: flex;
-        flex-direction: column;
-    }
     .selection {
         margin: 0 auto;
     }
@@ -35,6 +31,13 @@
 
 // Tablet
 @media only screen and (min-width: 740px) and (max-width: 1023px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .selection {
+        margin-bottom: 2rem;
+    }
 }
 
 // Mobile
@@ -45,6 +48,7 @@
     .selection {
         width: 100%;
         overflow: hidden;
+        margin-top: 2rem;
     }
     .show {
         max-height: 500px;

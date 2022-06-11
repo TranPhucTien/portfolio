@@ -23,7 +23,7 @@ export const itemsAPI = [
     },
     {
         image: beyond,
-        title: 'Beyon.',
+        title: 'Beyond.',
         tags: ['Pug', 'Sass', 'HTML', 'CSS'],
         desc: 'Một website để mình luyện Pug và SASS',
         href: 'https://tranphuctien.github.io/Beyond./',
