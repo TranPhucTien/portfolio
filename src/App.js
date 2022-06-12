@@ -17,13 +17,6 @@ function App() {
         document.body.style = `background-color: var(--black)`;
     }
 
-    const [loading, setLoading] = useState(true);
-    useEffect(() => {
-        setTimeout(() => {
-            setLoading(false);
-        }, 2000);
-    }, []);
-
     return (
         <Router>
             <div
@@ -33,16 +26,11 @@ function App() {
                     color: lightMode ? 'var(--text-color)' : 'var(--white)',
                 }}
             >
-                {loading ? (
-                    <Loader />
-                ) : (
-                    <>
-                        <Navbar />
-                        <Intro />
-                        <Info />
-                        <Portfolio />
-                    </>
-                )}
+                <Loader />
+                <Navbar />
+                <Intro />
+                <Info />
+                <Portfolio />
             </div>
         </Router>
     );

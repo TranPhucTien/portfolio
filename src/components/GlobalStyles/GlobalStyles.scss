@@ -231,7 +231,7 @@ input,
     transition: all 0.25s linear;
     cursor: default;
 
-    & > *button {
+    & > *a {
         pointer-events: all;
     }
 }
