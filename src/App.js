@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Info from './components/Info';
 import Intro from './components/Intro';
@@ -19,7 +19,7 @@ function App() {
 
     return (
         <Router>
-            <div
+            <section
                 className={'wrapper'}
                 style={{
                     background: lightMode ? '' : 'var(--night)',
@@ -31,7 +31,7 @@ function App() {
                 <Intro />
                 <Info />
                 <Portfolio />
-            </div>
+            </section>
         </Router>
     );
 }

@@ -65,7 +65,7 @@ function Portfolio() {
     };
 
     return (
-        <div className={cx('wrapper')} style={{ background: lightMode ? 'var(--background)' : 'var(--night)' }}>
+        <section className={cx('wrapper')} style={{ background: lightMode ? 'var(--background)' : 'var(--night)' }}>
             <div className={classNames(styles.container, 'container')}>
                 <div className={'sub-header-container'}>
                     <hr />
@@ -103,7 +103,7 @@ function Portfolio() {
                     />
                 </button>
             </div>
-        </div>
+        </section>
     );
 }
 

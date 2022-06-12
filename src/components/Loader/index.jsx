@@ -9,11 +9,14 @@ function Loader() {
     const wrapperLoaderRef = useRef(null);
     const [isLoader, setIsLoader] = useState(true);
 
+    const time = Math.floor(Math.random() *  1000 + 1000)
+
     useEffect(() => {
         setTimeout(() => {
             setIsLoader(false);
-        }, 1000);
-    }, []);
+        }, time);
+
+    }, [time]);
 
     if (!isLoader) {
         wrapperLoaderRef.current.style.display = 'none';

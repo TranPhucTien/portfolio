@@ -37,7 +37,7 @@ function Intro() {
     }
 
     return (
-        <div className={classNames(styles.wrapper, 'container')}>
+        <section className={classNames(styles.wrapper, 'container')}>
             <div className={cx('content')}>
                 <div className={cx('content-title')}>
                     <h2 className={cx('content-hello')}>Xin chào!</h2>
@@ -72,7 +72,7 @@ function Intro() {
             <div className={cx('image')}>
                 <IntroLottie />
             </div>
-        </div>
+        </section>
     );
 }
 

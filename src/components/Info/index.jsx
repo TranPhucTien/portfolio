@@ -29,7 +29,7 @@ function Info() {
     };
 
     return (
-        <div className={cx('wrapper')} style={{ background: lightMode ? 'var(--background-darker)' : 'var(--night)' }}>
+        <section className={cx('wrapper')} style={{ background: lightMode ? 'var(--background-darker)' : 'var(--night)' }}>
             <div className={'container'}>
                 <div className={'sub-header-container'}>
                     <hr />
@@ -60,7 +60,7 @@ function Info() {
                     </Routes>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 
