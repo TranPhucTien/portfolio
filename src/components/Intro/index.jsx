@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 function Intro() {
     // Check iOS
     let _iOSDevice = !!navigator.platform.match(/iPhone|iPod|iPad/);
-    let facebookLink = 'facebook.com/100009531825526'; // Open facebook in web
+    let facebookLink = 'https://www.facebook.com/tranphuctien2003/'; // Open facebook in web
 
     function getMobileOperatingSystem() {
         var userAgent = navigator.userAgent || navigator.vendor || window.opera;
