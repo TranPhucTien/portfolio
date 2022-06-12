@@ -2,17 +2,8 @@ import musicPlayer from '~/assets/images/music_player.png'
 import beyond from '~/assets/images/beyond.png'
 import helling from '~/assets/images/helling.png'
 import light from '~/assets/images/light.png'
-import portfolio from '~/assets/images/portfolio.png'
 
 export const itemsAPI = [
-    {
-        image: portfolio,
-        title: 'Portfolio',
-        tags: ['ReactJS', 'JavaScript', 'HTML', 'CSS'],
-        desc: 'Là trang web các bạn đang xem nè',
-        href: 'https://portfolio-alpha-one-91.vercel.app/',
-        code: 'https://github.com/TranPhucTien/portfolio'
-    },
     {
         image: musicPlayer,
         title: 'Music Player',
