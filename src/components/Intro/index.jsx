@@ -52,7 +52,8 @@ function Intro() {
                     href={facebookLink}
                     className={classNames(styles.button, 'button button-shadow button-border button-primary')}
                 >
-                    Kết nối với mình
+                    {/* Kết nối với mình */}
+                    {facebookLink}
                 </a>
                 <div className={cx('icons')}>
                     <a target={'_blank'} rel="noreferrer" href="https://github.com/TranPhucTien/">
