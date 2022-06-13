@@ -20,7 +20,7 @@
     background: rgba(255, 255, 255, 0.7);
     border-radius: 20px;
     max-width: 100%;
-    overscroll-behavior: none; // Disable scroll behavior in safari
+    overscroll-behavior: auto; // Disable scroll behavior in safari
 }
 
 // Mobile and tablet
