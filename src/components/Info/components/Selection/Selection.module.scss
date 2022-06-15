@@ -9,8 +9,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
     padding: 20px;
+
+    & > * {
+        margin-right: 20px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
 }
 
 // Tablet and mobile
